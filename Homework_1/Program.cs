@@ -12,7 +12,7 @@
                 simpleArray[index] = array[i, j];
                 index++;
             }
-        Array.Sort(simpleArray);
+        ArraySort(0, simpleArray.Length - 1, simpleArray);
         index = 0;
         for (int i = 0; i < array.GetLength(0); i++)
             for (int j = 0; j < array.GetLength(1); j++)
@@ -23,7 +23,7 @@
 
         ArrayView(array);
     }
-    private int[] ArraySort(int left, int right, int[] array)
+    private static int[] ArraySort(int left, int right, int[] array)
     {
         if (left < right)
         {
